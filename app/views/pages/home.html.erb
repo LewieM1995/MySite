@@ -1,48 +1,28 @@
-<!DOCTYPE html>
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>ALDI UK | Homepage</title>
-    <meta name="Homepage" content="">
-    <meta name="viewport" content="width=device-width, initial-scaler=1">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="pages.css" type="text/css"/>
-    <link rel="icon" href="" type="image/x-icon">
-  </head>
-
-  <body>
 
 
-<header>
-  <div>
-    <h1>Sun Chemical - Returns Organiser</h1>
-  </div>
-</header>
-
-<div class="correct_list_container">
-  <div>
-    <label for="typehead" class="correct_list"></label>
-    <input name="text" type="text" maxlength="1000"   class="correct_list_input" placeholder="Enter List of Codes">
+<%= form_with url: "/pages/result", method: :post do |form| %>
+<div class="list_container">
+  <div class="correct_list_container">
+    <label for="typehead"></label>
+    <textarea name="array1" type="text" maxlength="1000" class="correct_list_input" placeholder="Enter List of Codes"></textarea>
   </div>
 
-  <div>
-    <label for="typehead" class="incorrect_list"></label>
-    <input name="text" type="text" maxlength="1000" class="incorrect_list_input" placeholder="Enter List of Codes from Rexson">
+  <div class="incorrect_list_container">
+    <label for="typehead"></label>
+    <textarea name="array2" type="text" maxlength="1000" class="incorrect_list_input" placeholder="Enter List of Codes from Rexson"></textarea>
   </div>
-</div>
 
-<div>
-  <div>
-    <div>
+  <div class="submit_container">
       <button type="submit" class="items-button">Submit</button>
-    </div>
-    <label for="typehead" class="incorrect_list"></label>
-    <output name="text" type="text" maxlength="1000" class="incorrect_list_input" placeholder="Enter List of Codes">
+  </div>
+
+</div>
+<% end %>
+
+
+<div class="output_container">
+  <div>
+    <label for="typehead"></label>
+    <output name="output" for="array1 array2" type="text" maxlength="1000" class="incorrect_list_out" placeholder="Enter List of Codes"></output>
   </div>
 </div>
-
-</body>
-
-</html>
