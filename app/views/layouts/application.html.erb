@@ -2,7 +2,7 @@
 <html>
   <head>
     <title> Homepage </title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,10 +16,13 @@
 
   <header>
   <div>
-    <h1><a href="/pages/home">Sun Chemical - Returns Organiser</a></h1>
+    <h1>Sun Chemical - Returns Organiser</h1>
   </div>
   </header>
 
+  <div class="logo-div">
+    <a href="home"><img class="logo"src="/SunChem-logo.jpg" width="200" height="80"></a>
+  </div>
 
     <%= yield %>
   </body>

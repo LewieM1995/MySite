@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   
   post 'pages/result' => 'pages#result'
 
+  get 'pages/public' => 'pages#home'
+  get 'pages/public' => 'pages/home'
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

@@ -18,5 +18,9 @@ class PagesController < ApplicationController
         #puts ""
     end
 
+    def public
+    end
+
+
 
 end
